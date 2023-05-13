@@ -1,6 +1,6 @@
 import React from 'react';
-import BadIcon from '../images/BadIcon.svg';
-import GoodIcon from '../images/GoodIcon.svg';
+import badIcon from '../images/badIcon.svg';
+import goodIcon from '../images/goodIcon.svg';
 
 function InfoToolTip({ isOpen, onClose, isSuccess }) {
   return (
@@ -8,12 +8,12 @@ function InfoToolTip({ isOpen, onClose, isSuccess }) {
       <div className='popup__container'>
         {isSuccess ? (
           <>
-            <img className="popup__infotooltip-icon" src={`${GoodIcon}`} alt='успешная регистрация' />
+            <img className="popup__infotooltip-icon" src={`${goodIcon}`} alt='успешная регистрация' />
             <p className="popup__infotooltip-text">Вы успешно зарегистрировались!</p>
           </>
         ) : (
           <>
-            <img className='popup__infotooltip-icon' src={`${BadIcon}`} alt='не удалось зарегистрироваться' />
+            <img className='popup__infotooltip-icon' src={`${badIcon}`} alt='не удалось зарегистрироваться' />
             <p className='popup__infotooltip-text'>Что-то пошло не так! Попробуйте ещё раз.</p>
           </>
         )}

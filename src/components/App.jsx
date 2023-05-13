@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -173,11 +173,9 @@ function App() {
     if (jwt) {
       auth.checkToken(jwt)
         .then((res) => {
-          if (res) {
-            setEmail(res.res.data.email);
+            setEmail(res.data.email);
             setLoggedIn(true);
             navigate("/", { replace: true });
-          }
         })
         .catch((err) => {
           console.log(err);

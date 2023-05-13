@@ -28,6 +28,7 @@ function Login({ onLogin, onEmail }) {
     auth.authorize(formValue.email, formValue.password)
       .then((data) => {
         if (data.token) {
+          localStorage.setItem("jwt", data.token);
           setFormValue({ email: '', password: '' });
           onLogin();
           onEmail(formValue.email);
