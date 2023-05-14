@@ -166,7 +166,7 @@ function App() {
 
   useEffect(() => {
     tokenCheck();
-  }, [])
+  }, []);
 
   function tokenCheck() {
     const jwt = localStorage.getItem('jwt');
@@ -182,7 +182,6 @@ function App() {
         })
     }
   }
-
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
