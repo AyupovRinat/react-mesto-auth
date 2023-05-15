@@ -1,6 +1,6 @@
 import React from 'react';
-import badIcon from '../images/badicon.svg';
-import goodIcon from '../images/goodicon.svg';
+import badIcon from '../images/badimage.svg';
+import goodIcon from '../images/goodimage.svg';
 
 function InfoToolTip({ isOpen, onClose, isSuccess }) {
   return (
